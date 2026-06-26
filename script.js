@@ -96,7 +96,7 @@ async function run() {
     newLine();
 
     const exp = [
-        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren           (Jun 2025 ~ Nov 2025)",
+        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren          (Jun 2025 ~ Nov 2025)",
         " * b19d22f Data Scientist @ Amer Andish Hooshmand                (Jan 2023 ~ May 2025)",
         " * c77ae41 Mobile Developer @ Data Mining Leaders                (Feb 2021 ~ Jun 2022)",
         " * d14fa92 Mobile Developer @ Nikaat                             (Oct 2020 ~ Feb 2021)"
