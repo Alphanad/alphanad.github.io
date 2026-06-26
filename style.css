@@ -8,79 +8,40 @@ body {
     background: #000;
     color: #fff;
     font-family: monospace;
-    padding: 40px;
-    line-height: 1.8;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.terminal {
-    max-width: 900px;
+#terminal {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 15px;
 }
 
-.logo pre {
-    color: #4da6ff;
-    font-size: 16px;
-    margin-bottom: 30px;
+.green {
+    color: #98c379;
 }
 
-.section {
-    margin-bottom: 30px;
+.blue {
+    color: #61afef;
 }
 
-.label {
-    color: #999;
+.yellow {
+    color: #e5c07b;
+}
+
+.cursor {
     display: inline-block;
-    width: 140px;
-}
-
-.section-title {
-    color: #00ff99;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-li::before {
-    content: "* ";
-    color: #ffd700;
-}
-
-a {
-    color: #4da6ff;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.footer {
-    margin-top: 40px;
-    color: #00ff99;
-}
-
-#typing::after {
-    content: "_";
+    width: 8px;
+    height: 18px;
+    background: white;
     animation: blink 1s infinite;
+    vertical-align: middle;
 }
 
 @keyframes blink {
     50% {
         opacity: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-
-    .label {
-        width: auto;
-        display: block;
     }
 }
