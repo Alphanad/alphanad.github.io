@@ -149,12 +149,10 @@ async function run() {
     newLine();
 
     const skills = [
-        ["Languages:              ", "Python, Dart, Java, C++"],
-        ["Frameworks:             ", "Flutter, FastAPI, Django"],
-        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering,"],
-        ["                        ", "Dify, LLM Workflow Design"],
-        ["Tools & Technologies:   ", "Pandas, NumPy, Matplotlib, Scikit-Learn,"],
-        ["                        ", "PyTorch, TensorFlow, Docker, Linux, Git"]
+        ["Languages:              ", "Python, Dart, Java, C"],
+        ["Frameworks:             ", "Flutter, FastAPI, Django, PyTorch, TensorFlow"],
+        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering, Dify, LLM Workflow Design"],
+        ["Tools & Technologies:   ", "Pandas, NumPy, Matplotlib, Scikit-Learn, Docker, Linux, Git"]
     ];
 
     for (const [label, value] of skills) {
