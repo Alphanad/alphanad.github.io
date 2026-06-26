@@ -1,6 +1,11 @@
 const terminal = document.getElementById("terminal");
+const viewport = document.getElementById("viewport");
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+function scrollToBottom() {
+    viewport.scrollTop = viewport.scrollHeight;
+}
 
 function calculateAge() {
     const birthDate = new Date("1998-06-17");
@@ -28,6 +33,7 @@ async function typeText(text, className = "") {
 
     for (const char of [...text]) {
         span.textContent += char;
+        scrollToBottom();
         await sleep(18);
     }
 }
@@ -36,6 +42,7 @@ function newLine(count = 1) {
     for (let i = 0; i < count; i++) {
         terminal.appendChild(document.createElement("br"));
     }
+    scrollToBottom();
 }
 
 async function typePassword(length = 8) {
@@ -49,6 +56,7 @@ async function typePassword(length = 8) {
         cursor.className = "cursor";
         span.appendChild(cursor);
 
+        scrollToBottom();
         await sleep(180);
 
         span.removeChild(cursor);
@@ -57,8 +65,8 @@ async function typePassword(length = 8) {
 
 async function typeLinks() {
     const links = [
-        ["LinkedIn", "https://linkedin.com/alphanad"],
         ["GitHub", "https://github.com/alphanad"],
+        ["LinkedIn", "https://linkedin.com/alphanad"],
         ["Instagram", "https://instagram.com/alphanad"],
         ["eMail", "mailto:alphanad.official@gmail.com"]
     ];
@@ -76,6 +84,7 @@ async function typeLinks() {
 
         for (const char of [...label]) {
             a.textContent += char;
+            scrollToBottom();
             await sleep(18);
         }
 
@@ -134,7 +143,7 @@ async function run() {
     newLine();
 
     const experiences = [
-        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren          (Jun 2025 ~ Nov 2025)",
+        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren           (Jun 2025 ~ Nov 2025)",
         " * b19d22f Data Scientist @ Amer Andish Hooshmand                (Jan 2023 ~ May 2025)",
         " * c77ae41 Mobile Developer @ Data Mining Leaders                (Feb 2021 ~ Jun 2022)",
         " * d14fa92 Mobile Developer @ Nikaat                             (Oct 2020 ~ Feb 2021)"
@@ -151,7 +160,7 @@ async function run() {
     const skills = [
         ["Languages:              ", "Python, Dart, Java, C"],
         ["Frameworks:             ", "Flutter, FastAPI, Django, PyTorch, TensorFlow"],
-        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering, Dify, LLM Workflow Design"],
+        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering, AI Chatbots, LLM Workflow Design"],
         ["Tools & Technologies:   ", "Pandas, NumPy, Matplotlib, Scikit-Learn, Docker, Linux, Git"]
     ];
 
@@ -169,7 +178,7 @@ async function run() {
 
     const education = [
         " * M.Sc. Artificial Intelligence & Robotics @ Islamic Azad University South Tehran Branch (2022 ~ 2025)",
-        " * B.Sc. Software Engineering @ Karaj Islamic Azad University                             (2016 ~ 2021)"
+        " * B.Sc. Software Engineering @ Karaj Islamic Azad University                            (2016 ~ 2021)"
     ];
 
     for (const edu of education) {
@@ -194,6 +203,8 @@ async function run() {
     const cursor = document.createElement("span");
     cursor.className = "cursor";
     terminal.appendChild(cursor);
+
+    scrollToBottom();
 }
 
 run();
