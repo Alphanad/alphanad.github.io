@@ -171,8 +171,8 @@ async function run() {
 
     const skills = [
         ["Languages:              ", "Python, Dart, Java, C"],
-        ["Frameworks:             ", "Flutter, FastAPI, Django, PyTorch, TensorFlow"],
-        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering, AI Chatbots, LLM Workflow Design"],
+        ["Frameworks:             ", "Flutter, FastAPI, PyTorch, TensorFlow"],
+        ["AI / LLM:               ", "AI Chatbots, RAG Pipelines, Prompt Engineering, LLM Workflow Design"],
         ["Tools & Technologies:   ", "Pandas, NumPy, Matplotlib, Scikit-Learn, Docker, Linux, Git"]
     ];
 
