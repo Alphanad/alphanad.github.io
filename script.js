@@ -26,7 +26,7 @@ async function typeText(text, className = "") {
 
     terminal.appendChild(span);
 
-    for (const char of text) {
+    for (const char of [...text]) {
         span.textContent += char;
         await sleep(18);
     }
@@ -69,10 +69,12 @@ async function typeLinks() {
         const a = document.createElement("a");
         a.href = url;
         a.target = "_blank";
+        a.rel = "noopener noreferrer";
         a.className = "link";
+
         terminal.appendChild(a);
 
-        for (const char of label) {
+        for (const char of [...label]) {
             a.textContent += char;
             await sleep(18);
         }
