@@ -7,11 +7,11 @@ function calculateAge() {
     const today = new Date();
 
     let age = today.getFullYear() - birthDate.getFullYear();
-    const month = today.getMonth() - birthDate.getMonth();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
 
     if (
-        month < 0 ||
-        (month === 0 && today.getDate() < birthDate.getDate())
+        monthDiff < 0 ||
+        (monthDiff === 0 && today.getDate() < birthDate.getDate())
     ) {
         age--;
     }
@@ -166,8 +166,8 @@ async function run() {
     newLine();
 
     const education = [
-        " * M.Sc. Artificial Intelligence & Robotics - Islamic Azad University of South Tehran Branch   (2022 ~ 2025)",
-        " * B.Sc. Software Engineering - Karaj Islamic Azad University                    (2016 ~ 2021)"
+        " * M.Sc. Artificial Intelligence & Robotics @ Islamic Azad University of South Tehran Branch (2022 ~ 2025)",
+        " * B.Sc. Software Engineering @ Karaj Islamic Azad University                                (2016 ~ 2021)"
     ];
 
     for (const edu of education) {
@@ -177,11 +177,6 @@ async function run() {
     }
 
     newLine();
-
-    await typeText("Hobbies:                ", "yellow");
-    await typeText("Basketball, Video Games, Guitar Playing", "blue");
-
-    newLine(2);
 
     await typeText("Connections:            ", "yellow");
     await typeLinks();
