@@ -132,7 +132,7 @@ async function run() {
     newLine();
 
     const experiences = [
-        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren          (Jun 2025 ~ Nov 2025)",
+        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren           (Jun 2025 ~ Nov 2025)",
         " * b19d22f Data Scientist @ Amer Andish Hooshmand                (Jan 2023 ~ May 2025)",
         " * c77ae41 Mobile Developer @ Data Mining Leaders                (Feb 2021 ~ Jun 2022)",
         " * d14fa92 Mobile Developer @ Nikaat                             (Oct 2020 ~ Feb 2021)"
@@ -156,6 +156,25 @@ async function run() {
     for (const [label, value] of skills) {
         await typeText(label, "yellow");
         await typeText(value, "blue");
+        newLine();
+        await sleep(80);
+    }
+
+    newLine();
+
+    await typeText("Education:", "yellow");
+    newLine();
+
+    const education = [
+        " * M.Sc. Artificial Intelligence & Robotics",
+        "   Islamic Azad University of South Tehran Branch   (2022 ~ 2025)",
+        "",
+        " * B.Sc. Software Engineering",
+        "   Karaj Islamic Azad University                    (2016 ~ 2021)"
+    ];
+
+    for (const edu of education) {
+        await typeText(edu, "green");
         newLine();
         await sleep(80);
     }
