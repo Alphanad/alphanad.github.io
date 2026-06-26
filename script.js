@@ -149,6 +149,8 @@ async function run() {
     const skills = [
         ["Languages:              ", "Python, Dart, Java, C++"],
         ["Frameworks:             ", "Flutter, FastAPI, Django"],
+        ["AI / LLM:               ", "RAG Pipelines, Prompt Engineering,"],
+        ["                        ", "Dify, LLM Workflow Design"],
         ["Tools & Technologies:   ", "Pandas, NumPy, Matplotlib, Scikit-Learn,"],
         ["                        ", "PyTorch, TensorFlow, Docker, Linux, Git"]
     ];
@@ -166,8 +168,8 @@ async function run() {
     newLine();
 
     const education = [
-        " * M.Sc. Artificial Intelligence & Robotics @ Islamic Azad University of South Tehran Branch (2022 ~ 2025)",
-        " * B.Sc. Software Engineering @ Karaj Islamic Azad University                                (2016 ~ 2021)"
+        " * M.Sc. Artificial Intelligence & Robotics @ Islamic Azad University South Tehran Branch (2022 ~ 2025)",
+        " * B.Sc. Software Engineering @ Karaj Islamic Azad University                             (2016 ~ 2021)"
     ];
 
     for (const edu of education) {
@@ -182,14 +184,6 @@ async function run() {
     await typeLinks();
 
     newLine(2);
-
-    for (let i = 0; i < 3; i++) {
-        await typeText("~", "blue");
-        newLine();
-        await sleep(60);
-    }
-
-    newLine();
 
     await typeText("/alphanad/info (END)", "yellow");
 
