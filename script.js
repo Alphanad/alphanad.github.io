@@ -44,6 +44,7 @@ async function typePassword(length = 8) {
 
     for (let i = 0; i < length; i++) {
         span.textContent += "*";
+
         const cursor = document.createElement("span");
         cursor.className = "cursor";
         span.appendChild(cursor);
@@ -112,7 +113,7 @@ async function run() {
 
     const info = [
         ["Full Name:              ", "Ali Fathi Nasrabad"],
-        ["Birthday:               ", `17 June 1998 (${calculateAge()})`],
+        ["Birthday:               ", `17 June 1998 - ${calculateAge()} years old`],
         ["Alias:                  ", "Alphanad"],
         ["Location:               ", "Tehran, Iran"],
         ["Timezone:               ", "UTC +03:30"]
@@ -131,10 +132,10 @@ async function run() {
     newLine();
 
     const experiences = [
-        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren",
-        " * b19d22f Data Scientist @ Amer Andish Hooshmand",
-        " * c77ae41 Mobile Developer @ Data Mining Leaders",
-        " * d14fa92 Mobile Developer @ Nikaat"
+        " * a82f91c (HEAD -> ARIO) Mobile Developer @ Ario Soren          (Jun 2025 ~ Nov 2025)",
+        " * b19d22f Data Scientist @ Amer Andish Hooshmand                (Jan 2023 ~ May 2025)",
+        " * c77ae41 Mobile Developer @ Data Mining Leaders                (Feb 2021 ~ Jun 2022)",
+        " * d14fa92 Mobile Developer @ Nikaat                             (Oct 2020 ~ Feb 2021)"
     ];
 
     for (const exp of experiences) {
