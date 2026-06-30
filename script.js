@@ -115,7 +115,7 @@ async function run() {
         \\/     |__|        \\/     \\/     \\/     \\/      \\/
 `;
 
-    typeText(logo, "red");
+    await typeText(logo, "red");
     await sleep(50);
     newLine();
 
